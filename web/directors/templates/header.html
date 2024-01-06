@@ -1,0 +1,17 @@
+{% load static %}
+{% load i18n %}
+
+<header>
+    <a href="{% url 'index' %}" onclick="delayTransition(this)"><img class="logo-lucarne" type="img/png" src="{% static 'img/logo/logo-lucarne/logo_100-border.png' %}"></a>
+    <nav class="menu">
+        <button onclick="teamMove()">
+            <div class="button-window">
+                <div class="mini-window"></div>
+                <div class="mini-window"></div>
+                <div class="mini-window"></div>
+                <div class="mini-window"></div>
+            </div>
+            <h4>{% trans 'Equipe' %}</h4>
+        </button>
+    </nav>
+</header>

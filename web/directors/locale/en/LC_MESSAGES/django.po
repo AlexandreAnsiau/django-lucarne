@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-19 17:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/settings.py:127
+msgid "Français"
+msgstr "French"
+
+#: web/settings.py:128
+msgid "English"
+msgstr "Anglais"
+
+#: directors/admin.py:16
+#, python-format
+msgid "Administration de %(project_name)s"
+msgstr "%(project_name)s administration"
+
+#: directors/admin.py:57 directors/admin.py:60
+msgid "Video"
+msgstr "Video"
+
+#: directors/admin.py:58
+msgid "Videos"
+msgstr "Videos"
+
+#: directors/admin.py:66
+msgid "Nom de la video"
+msgstr "Name of the video"
+
+#: directors/admin.py:88 directors/admin.py:92
+msgid "screenshot"
+msgstr "screenshot"
+
+#: directors/admin.py:89
+msgid "screenshots"
+msgstr "screenshots"
+
+#: directors/admin.py:117 directors/models.py:30
+msgid "utilisateur"
+msgstr "user"
+
+#: directors/admin.py:151 directors/models.py:19
+msgid "photo de profil"
+msgstr "profile picture"
+
+#: directors/admin.py:179
+msgid "video"
+msgstr "video"
+
+#: directors/admin.py:223 directors/models.py:43
+msgid "video de présentation"
+msgstr "video presentation"
+
+#: directors/apps.py:8 directors/models.py:56
+msgid "réalisateurs"
+msgstr "directors"
+
+#: directors/forms.py:25
+msgid "Les deux mots de passe ne sont pas identiques"
+msgstr "The two passwords are not the same"
+
+#: directors/forms.py:38
+msgid "Adresse email"
+msgstr "Email address"
+
+#: directors/forms.py:39
+msgid "Sujet"
+msgstr "Subject"
+
+#: directors/forms.py:40
+msgid "Message"
+msgstr "Message"
+
+#: directors/models.py:16
+msgid "prénom"
+msgstr "first name"
+
+#: directors/models.py:17
+msgid "nom de famille"
+msgstr "last name"
+
+#: directors/models.py:18
+msgid "description"
+msgstr "description"
+
+#: directors/models.py:20
+msgid "num de tel"
+msgstr "phone number"
+
+#: directors/models.py:21
+msgid "métier"
+msgstr "job"
+
+#: directors/models.py:31
+msgid "utilisateurs"
+msgstr "users"
+
+#: directors/models.py:46
+msgid "catégorie"
+msgstr "category"
+
+#: directors/models.py:47
+msgid "catégories"
+msgstr "categories"
+
+#: directors/models.py:54 directors/models.py:94
+msgid "nom"
+msgstr "name"
+
+#: directors/models.py:61
+msgid "vidéo"
+msgstr "video"
+
+#: directors/models.py:62
+msgid "vidéos"
+msgstr "videos"
+
+#: directors/templates/footer.html:8
+msgid "Mail copié dans le clipboard"
+msgstr "Mail copy into clipboard"
+
+#: directors/templates/header.html:14
+msgid "Equipe"
+msgstr "Team"
+
+#: directors/templates/index.html:5
+msgid "Accueil"
+msgstr "Home"
+
+#: directors/templates/video_detail.html:28
+msgid "Galerie"
+msgstr "Gallery"
+
+#: directors/templates/video_detail.html:32
+msgid "Fermer"
+msgstr "Close"
+
+#: directors/urls.py:11
+msgid "categorie/<int:pk>"
+msgstr "category/<int:pk>"
+
+#: directors/urls.py:12
+msgid "realisateur/<int:pk>"
+msgstr "director/<int:pk>"
+
+#: directors/urls.py:13
+msgid "video/<int:pk>"
+msgstr "video/<int:pk>"

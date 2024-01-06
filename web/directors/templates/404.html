@@ -1,0 +1,24 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lucarne Films - 404</title>
+	<link rel="icon" type="image/png" href="{% static 'img/logo/favicon/favicon.png' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/404.css' %}">
+<!--	<link rel="stylesheet" type="text/css" href="{% static 'css/cursor.css' %}">-->
+	{% block link %}{% endblock %}
+</head>
+<body>
+
+	<a href="/">
+		<img src="{% static 'img/logo/404/logo_404.png' %}">
+	</a>
+	
+	<!-- <script type="text/javascript" src="{% static 'js/viewportHeight.js' %}"></script> -->
+</body>
+</html>

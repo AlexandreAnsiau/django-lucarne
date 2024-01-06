@@ -1,0 +1,39 @@
+{% load static %}
+{% load custom_tags_directors %}
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="De la production cinématographique à la communication vidéo, Lucarne films couvre toutes les possibilités d'expressions audiovisuelles ">
+	<meta name="keywords" content="Lucarne, Lucarne-films, Bruxelles, Belgique, film, cinéma, production, audiovisuelle, co-production, tax shelter, fiction, publicité, branding, court-métrage, long-métrage, advertising, advertisement, corporate, film d’entreprise, communication, réalisateur, réalisation.">
+	<title>Lucarne Films - {% block title %}{% endblock %}</title>
+	<link rel="icon" type="image/png" href="{% static 'img/logo/favicon/favicon.png' %}">
+	<script type="text/javascript" src="{% static 'js/load.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/viewportHeight.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/window.css' %}">
+	{% block link %}{% endblock %}
+</head>
+<body>
+<div class="intro">
+	<img src="{% static 'img/logo/logo-lucarne/logo_100.png' %}">
+</div>
+{% include 'header.html' %}
+	<main id="mainAppear">
+		{% include 'contact-icon.html' %}
+		<div class="initial">
+  		  {% block main %}{% endblock %}
+		</div>
+	</main>
+{% include 'footer.html' %}
+
+	<script type="text/javascript" src="{% static 'js/equipe.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/copymail.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/unload.js' %}"></script>
+	{% block javascript %}{% endblock %}
+</body>
+</html>

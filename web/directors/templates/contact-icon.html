@@ -1,0 +1,38 @@
+{% load static %}
+{% load custom_tags_directors %}
+
+<div id="navCorner" class="grid-window">
+    {% for director, num in directors|zip_longest_iterable:4 %}
+        {% if director %}
+            <a href="{% url 'director' pk=director.pk %}" onclick="delayTransition(this)">
+                <div class="window{{ forloop.counter }} openableWindow">
+                    <div class="title">
+                        <h2>{{ director.first_name }}</h2>
+                    </div>
+                    <div class="resume">
+                        <div class="upper">
+                            <img class="window-img" src="{% if director.profil_image %}{{ director.profil_image.url }}{% endif %}">
+                            <div class="window-description">
+                                <h3>{{ director.first_name }}</h3>
+                                <p>{{ director.description }}</p>
+                            </div>
+                        </div>
+                        <div class="window-contact">
+                            <p>{{ director.email }}</p>
+                            <p>{{ director.phone_number }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {% else %}
+            <div class="window{{ forloop.counter }}"></div>
+        {% endif%}
+    {% endfor %}
+</div>
+<div id="navCenter" class="grid-window">
+    <div class="window5"></div>
+    <div class="window6"></div>
+    <div class="window7"></div>
+    <div class="window8"></div>
+</div>
+<div class="screener"></div>
