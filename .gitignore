@@ -143,11 +143,13 @@ GitHub.sublime-settings
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-web/directors/locale/en/LC_MESSAGES/django.mo
 .idea/inspectionProfiles/profiles_settings.xml
-web/directors/static/img/.DS_Store
 
 **/collectstatic
 
 .env*
 !.env.exemple
+
+**/node_modules
+
+**/django.mo
