@@ -38,6 +38,7 @@ ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 # Application definition
 
 INSTALLED_APPS = [
+    "registrations",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -158,3 +159,5 @@ else:
     pass
 
 ADMIN_URL = env("ADMIN_URL") if env("ADMIN_URL") else "admin/"
+
+AUTH_USER_MODEL = "registrations.CustomUser"
