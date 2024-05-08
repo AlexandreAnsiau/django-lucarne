@@ -1,20 +1,6 @@
-# django-base
+# django-lucarne
 
-As indicated by its name, django-base, this project can be used as base for the django projects.
-
-## Preinstalled features:
-* Environment variables
-* requirements.txt
-* package.json & package-lock.json
-* Webpack
-* Bootstrap
-* The basic templates
-* Main app
-* test view (path: test/)
-
-## Important information:
-
-Postgres is used as default database as visible in the .env.exemple. But also in the requirements.txt because the psycopg2 package is installed.
+This project has been created for directors who want to introduce their works.
 
 ## Instantiate the project
 
@@ -31,14 +17,10 @@ The following commands create a python virtual environment at the same level as 
 > mkdir `project_name` \
 cd `project_name` 
 
-2. Fetch the *django-base* repository and name it *web*.
+2. Fetch the *django-lucarne* repository and name it *web*.
 
-> git clone git@github.com:AlexandreAnsiau/django-base.git web \
+> git clone git@github.com:AlexandreAnsiau/django-lucarne.git web \
  cd web
-
-3. The *.git* repository must be deleted because the django-base must not be edited. 
-
-> rm -rf .git
 
 If the project must be gitted, the command **git init** must be done in the *web* repository. 
 
@@ -93,7 +75,3 @@ First at all, the django server must be turned on.
 > python manage.py runserver
 
 Then the content of the url 127.0.0.1:8000/test/ should be displayed in your browser.
-
-### 6. README.md edition
-
-If the project is not the django-base, the h1 title must be replaced by the name of the new project and the description must be changed. The paragraphs named *Preinstalled features*, *Important informations* and *README.md edition* may be deleted.
