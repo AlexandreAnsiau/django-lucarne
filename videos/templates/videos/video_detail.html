@@ -1,0 +1,43 @@
+{% extends 'body.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/video.css' %}">
+{% endblock %}
+
+{% block title %}{{ video }}{% endblock %}
+
+{% block main %}
+<div class="darkBkg">
+    <div id="autoscroll" class="contentScroll">
+        <img class="close" src="{% static 'img/logo/close/close.svg' %}">
+        <div class="contentFrame" oncontextmenu="return false;">
+            <div class="grid-fullvideo">
+                 <video controls>
+                    <source src="{{ video.video.url }}" type="video/mp4">
+                    Ce format de video n'est pas pris en charge par votre browser...
+                 </video>
+                {% if video.description %}
+                <div>
+                    {{ video.description }}
+                </div>
+                {% endif %}
+                {% if video.screenshots %}
+                <div class="grid-screenshot" oncontextmenu="return false;">
+                    {% for screenshot in video.screenshots.all %}
+                        <img class="screenshot" src="{{ screenshot.screenshot.url }}">
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{% static 'js/previouspage.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/gridhandle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/icondisplayfix.js' %}"></script>
+{% endblock %}

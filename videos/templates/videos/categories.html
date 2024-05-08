@@ -1,0 +1,25 @@
+{% extends 'body.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Accueil' %}{% endblock %}
+
+{% block main %}
+<div class="heightWindow">
+    <div class="grid-window" oncontextmenu="return false;">
+        {% for category in categories %}
+        <a href="{% url 'category' pk=category.id %}" onclick="delayTransition(this)">
+            <div class="window{{ forloop.counter }} openableWindow">
+                <div class="title">
+                    <h2>{{ category.name|upper }}</h2>
+                </div>
+                <video class="video-index" muted loop preload autoplay>
+                    <source src="{% if category.presentation_video %}{{ category.presentation_video.url }}{% endif %}" type="video/mp4">
+                    Ce format de video n'est pas pris en charge par votre browser...
+                </video>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

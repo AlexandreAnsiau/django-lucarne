@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lucarne Films - 404</title>
+	<link rel="icon" type="image/png" href="{% static 'img/logo/favicon/favicon.png' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/404.css' %}">
+</head>
+<body>
+
+	<a href="/">
+		<img src="{% static 'img/logo/404/logo_404.png' %}">
+	</a>
+	
+</body>
+</html>

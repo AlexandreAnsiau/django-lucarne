@@ -6,8 +6,11 @@
     {% block header %}{% endblock %}
 </header>
 
-<main>
-    {% block main %}{% endblock %}
+<main id="mainAppear">
+    {% include 'directors/director_icons.html' %}
+    <div class="initial">
+        {% block main %}{% endblock %}
+    </div>
 </main>
 
 <footer>
