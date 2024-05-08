@@ -1,7 +1,9 @@
 from django.contrib import sitemaps
 from django.urls import reverse
 
-from directors.models import Category, CustomUser, Video
+from directors.models import Director
+from videos.models import Category, Video
+
 # Create your views here.
 
 class StaticViewSitemap(sitemaps.Sitemap):
@@ -46,7 +48,7 @@ class DirectorsViewSitemap(sitemaps.Sitemap):
         i18n = True
 
         def items(self):
-            return CustomUser.objects.all()
+            return Director.objects.all()
 
         def location(self, item):
             return reverse("director", kwargs={"pk": item.id})

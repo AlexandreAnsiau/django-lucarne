@@ -9,7 +9,7 @@ class Category(FileModel):
     name = models.CharField(max_length=200, unique=True)
     # Videos of presentation are uploaded in presentation_videos/ placed in the directory asigns to the setting constant MEDIA_ROOT
     presentation_video = models.FileField(upload_to="presentation_videos/", null=True, blank=True, verbose_name=_("video de présentation"))  # must add help text
-    is_visible = models.Boolean(default=False)
+    is_visible = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = _("catégorie")
@@ -22,7 +22,7 @@ class Category(FileModel):
 class Video(OrderableModel, FileModel):
     name = models.CharField(max_length=500, verbose_name=_("nom"))
     video = models.FileField(upload_to="videos/")  # Videos are uploaded in videos/ placed in the directory asigns to the setting constant MEDIA_ROOT
-    directors = models.ManyToManyField("CustomUser", related_name="videos", verbose_name=_("réalisateurs"))
+    directors = models.ManyToManyField("registrations.CustomUser", related_name="videos", verbose_name=_("réalisateurs"))
     categories = models.ManyToManyField("Category", related_name="videos")
     description = models.TextField(max_length=1000, blank=True)
     presentation_video = models.FileField(upload_to="presentation_resume_video/", null=True, blank=True, verbose_name=_("video de présentation"))  # must add help text

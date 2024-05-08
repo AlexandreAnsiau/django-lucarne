@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 
-from .models import CustomUser
+from .models import Director
 
 
 class DirectorView(DetailView):
-    model = CustomUser
+    model = Director
     context_object_name = "director"
-    template_name = "director_detail.html"
+    template_name = "directors/director_detail.html"
