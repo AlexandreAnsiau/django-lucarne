@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
 
-# Create your views here.
+from .models import CustomUser
+
+
+class DirectorView(DetailView):
+    model = CustomUser
+    context_object_name = "director"
+    template_name = "director_detail.html"
