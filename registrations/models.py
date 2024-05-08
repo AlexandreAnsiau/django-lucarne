@@ -6,16 +6,21 @@ from django.utils.translation import gettext_lazy as _
 # from .backends import CustomAuthBackend
 from .manager import CustomUserManager
 
+
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(max_length=500, unique=True)
     is_active = models.BooleanField(blank=True, default=True)
     is_staff = models.BooleanField(blank=True, default=False)
     is_superuser = models.BooleanField(blank=True, default=False)
-    is_visible = models.BooleanField(blank=True, default=True)
     first_name = models.CharField(max_length=100, verbose_name=_("prénom"))
     last_name = models.CharField(max_length=100, verbose_name=_("nom de famille"))
     slug = models.SlugField()
+    is_director = models.BooleanField(default=False)
+    description = models.TextField(max_length=1000, verbose_name=_("description"), blank=True)
+    profile_image = models.ImageField(upload_to="profil_images/", null=True, blank=True, verbose_name=_("photo de profil"))
+    phone_number = models.CharField(max_length=30, blank=True, verbose_name=_("num de tel"))
+    job = models.CharField(max_length=100, verbose_name=_("métier"), blank=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
