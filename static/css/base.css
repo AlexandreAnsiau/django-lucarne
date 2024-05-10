@@ -262,3 +262,7 @@ footer div span {
 	height: 15px;
 	padding: 0 10px;
 }
+
+.margin-auto{
+    margin: auto;
+}

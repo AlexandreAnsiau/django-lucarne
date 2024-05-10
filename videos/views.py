@@ -15,10 +15,10 @@ class CategoriesView(ListView):
 class CategoryView(DetailView):
     model = Category
     context_object_name = "category"
-    template_name = "videos/category_detail.html"
+    template_name = "videos/category.html"
 
 
 class VideoView(DetailView):
     model = Video
     context_object_name = "video"
-    template_name = "videos/video_detail.html"
+    template_name = "videos/video.html"

@@ -24,6 +24,8 @@
                 <h3>{{ video.name|title }}</h3>
             </div>
         </a>
+        {% empty %}
+            <p class="margin-auto">{% trans "Aucune video n'est disponible pour cette catégorie." %}</p>
         {% endfor %}
     </div>
     <div class="faderWhite"></div>
