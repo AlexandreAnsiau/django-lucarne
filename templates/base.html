@@ -14,8 +14,10 @@
     </div>
     {% block body %}{% endblock %}
 </body>
+{% include "frags/scripts.html" %}
 <script>
     {% include "frags/script.html" %}
     {% block script %}{% endblock %}
 </script>
+
 </html>
