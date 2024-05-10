@@ -27,6 +27,8 @@
                 <div class="grid-screenshot" oncontextmenu="return false;">
                     {% for screenshot in video.screenshots.all %}
                         <img class="screenshot" src="{{ screenshot.screenshot.url }}">
+                    {% empty %}
+                        {% trans "Aucun screenshot n'est disponible pour cette video." %}
                     {% endfor %}
                 </div>
                 {% endif %}
