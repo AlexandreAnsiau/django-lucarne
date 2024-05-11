@@ -5,7 +5,7 @@ django-admin-ordering==0.15.0
 django-cuser==2017.3.16
 django-environ==0.11.2
 django-js-asset==2.0.0
-django-modeltranslation==0.18.2
+django-modeltranslation==0.18.11
 django-tinymce==3.4.0
 gunicorn==20.1.0
 Pillow==9.1.1
