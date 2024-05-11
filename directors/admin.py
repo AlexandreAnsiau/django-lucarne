@@ -3,10 +3,10 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.html import mark_safe
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
 
 from .forms import DirectorCreationForm
 from .models import Director
+from videos.admin import VideosDirectorInline
 
 
 @admin.register(Director)
@@ -31,9 +31,9 @@ class DirectorAdmin(OrderableAdmin, BaseUserAdmin):
                                 "phone_number", "description_fr",
                                 "description_en", "job_fr", "job_en"]
             if obj and obj.id == request.user.id:
-                profil["fields"].extend(["profil_image"])
-            if obj and obj.profil_image:
-                profil["fields"].append("profil_image_display")
+                profil["fields"].extend(["profile_image"])
+            if obj and obj.profile_image:
+                profil["fields"].append("profile_image_display")
             return (("Profil", profil),)
         else:
             return (
@@ -44,18 +44,17 @@ class DirectorAdmin(OrderableAdmin, BaseUserAdmin):
 
     def get_inlines(self, request, obj=None):
         if obj and obj.id:
-            # return [VideosDirectorInline, FotosDirectorInline]
             return [VideosDirectorInline]
         else:
             return []
 
     def get_readonly_fields(self, request, obj=None):
-        return ["profil_image_display"]
+        return ["profile_image_display"]
 
     @admin.display(description=_("photo de profil"))
-    def profil_image_display(self, obj=None):
+    def profile_image_display(self, obj=None):
         if obj:
-            return mark_safe(f"<img src={obj.profil_image.url} style='max-width:500px; max-height:500px;'>")
+            return mark_safe(f"<img src={obj.profile_image.url} style='max-width:500px; max-height:500px;'>")
 
     def has_change_permission(self, request, obj=None):
         if (obj and obj.id == request.user.id) or obj is None:

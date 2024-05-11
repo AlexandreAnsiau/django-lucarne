@@ -38,17 +38,3 @@ class UserCreationForm(forms.ModelForm):
         if commit:
             user.save()
         return user
-
-
-class EmailForm(forms.Form):
-    from_email = forms.CharField(max_length=200, widget=forms.TextInput(attrs={"placeholder": _("Adresse email")}))
-    subject = forms.CharField(max_length=200, widget=forms.TextInput(attrs={"placeholder": _("Sujet")}))
-    body = forms.CharField(max_length=600, widget=forms.Textarea(attrs={"placeholder": _("Message")}))
-
-    def send_email(self):
-        EmailMessage(
-            subject=self.cleaned_data["subject"],
-            body=self.cleaned_data["body"],
-            from_email=self.cleaned_data["from_email"],
-            to=[settings.TO_EMAIL]
-        ).send()

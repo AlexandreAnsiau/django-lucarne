@@ -1,13 +1,14 @@
+from admin_ordering.models import OrderableModel
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
-# from .backends import CustomAuthBackend
 from .managers import CustomUserManager
+from common.models import FileModel
 
 
-class CustomUser(AbstractUser):
+class CustomUser(OrderableModel, FileModel, AbstractUser):
     username = None
     email = models.EmailField(max_length=500, unique=True)
     is_active = models.BooleanField(blank=True, default=True)
@@ -18,7 +19,7 @@ class CustomUser(AbstractUser):
     slug = models.SlugField()
     is_director = models.BooleanField(default=False)
     description = models.TextField(max_length=1000, verbose_name=_("description"), blank=True)
-    profile_image = models.ImageField(upload_to="profil_images/", null=True, blank=True, verbose_name=_("photo de profil"))
+    profile_image = models.ImageField(upload_to="profile_images/", null=True, blank=True, verbose_name=_("photo de profil"))
     phone_number = models.CharField(max_length=30, blank=True, verbose_name=_("num de tel"))
     job = models.CharField(max_length=100, verbose_name=_("métier"), blank=True)
 
@@ -27,7 +28,7 @@ class CustomUser(AbstractUser):
 
     objects = CustomUserManager()  # Default manager is always the first one to be declared.
 
-    class Meta:
+    class Meta(OrderableModel.Meta):
         verbose_name = _("utilisateur")
         verbose_name_plural = _("utilisateurs")
 
