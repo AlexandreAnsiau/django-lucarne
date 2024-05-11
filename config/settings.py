@@ -39,6 +39,7 @@ ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 # Application definition
 
 INSTALLED_APPS = [
+    "modeltranslation",
     "registrations",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django.contrib.sitemaps",
     "admin_ordering",
+    'django_admin_inline_paginator',
     "main",
     "directors",
     "videos",
@@ -133,6 +135,8 @@ LANGUAGES = (
     ("fr", _("Français")),
     ("en", _("English"))
 )
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'fr'
 
 TIME_ZONE = 'UTC'
 
