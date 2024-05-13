@@ -17,7 +17,6 @@ class CustomUser(OrderableModel, FileModel, AbstractUser):
     first_name = models.CharField(max_length=100, verbose_name=_("prénom"))
     last_name = models.CharField(max_length=100, verbose_name=_("nom de famille"))
     slug = models.SlugField()
-    is_director = models.BooleanField(default=False)
     description = models.TextField(max_length=1000, verbose_name=_("description"), blank=True)
     profile_image = models.ImageField(upload_to="profile_images/", null=True, blank=True, verbose_name=_("photo de profil"))
     phone_number = models.CharField(max_length=30, blank=True, verbose_name=_("num de tel"))
