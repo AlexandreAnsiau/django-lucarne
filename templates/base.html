@@ -5,6 +5,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
+    <title>Lucarne Films - {% block title %}{% endblock %}</title>
     {% include "frags/head.html" %}
     {% block head %}{% endblock %}
 </head>
