@@ -3,6 +3,7 @@ from pathlib import Path
 from django.db import models
 from django.db.models.fields.files import FileField
 
+
 class FileModel(models.Model):
 
     class Meta:
