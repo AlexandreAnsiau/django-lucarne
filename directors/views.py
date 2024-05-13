@@ -7,4 +7,4 @@ from .models import Director
 class DirectorView(DetailView):
     model = Director
     context_object_name = "director"
-    template_name = "directors/director_detail.html"
+    template_name = "directors/director.html"
