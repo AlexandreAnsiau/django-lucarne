@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-13 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin.py:14 admin.py:18
+msgid "Video"
+msgstr "Video"
+
+#: admin.py:15
+msgid "Videos"
+msgstr "Videos"
+
+#: admin.py:24
+msgid "Nom de la video"
+msgstr "Name of the video"
+
+#: admin.py:46 admin.py:50
+msgid "screenshot"
+msgstr "screenshot"
+
+#: admin.py:47
+msgid "screenshots"
+msgstr "screenshots"
+
+#: admin.py:80
+msgid "video"
+msgstr "video"
+
+#: admin.py:88 admin.py:112 models.py:11 models.py:28
+msgid "video de présentation"
+msgstr "video presentation"
+
+#: models.py:15
+msgid "catégorie"
+msgstr "category"
+
+#: models.py:16
+msgid "catégories"
+msgstr "categories"
+
+#: models.py:23
+msgid "nom"
+msgstr "name"
+
+#: models.py:25
+msgid "réalisateurs"
+msgstr "directors"
+
+#: models.py:31
+msgid "vidéo"
+msgstr "video"
+
+#: models.py:32
+msgid "vidéos"
+msgstr "videos"
+
+#: templates/videos/categories.html:5
+msgid "Accueil"
+msgstr "Home"
+
+#: templates/videos/category.html:28
+msgid "Aucune video n'est disponible pour cette catégorie."
+msgstr "No videos are available for this category."
+
+#: templates/videos/video.html:31
+msgid "Aucun screenshot n'est disponible pour cette video."
+msgstr "No screenshots are available for this video."
+
+#: urls.py:7
+msgid "categories/<int:pk>/"
+msgstr "categories/<int:pk>"
+
+#: urls.py:8
+msgid "<int:pk>/"
+msgstr "<int:pk>/"
+
