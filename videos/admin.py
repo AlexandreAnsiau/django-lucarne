@@ -25,9 +25,6 @@ class VideoInline(TabularInlinePaginated):
     def video_name(self, obj):
         return obj.video.name
 
-    def has_add_permission(self, request, obj=None):
-        return False
-
     def __str__(self):
         return self.video.name
 
@@ -56,9 +53,6 @@ class ScreenshotInline(OrderableAdmin, admin.TabularInline):
     def get_readonly_fields(self, request, obj=None):
         return ["screenshot_display"]
 
-    def has_add_permission(self, request, obj=None):
-        return True
-
 
 @admin.register(Video)
 class VideoAdmin(OrderableAdmin, admin.ModelAdmin):
@@ -75,7 +69,6 @@ class VideoAdmin(OrderableAdmin, admin.ModelAdmin):
             if obj.presentation_video:
                 fields.append("presentation_video_display")
         return fields
-
 
     @admin.display(description=_("video"))
     def video_display(self, obj=None):
@@ -121,10 +114,3 @@ class CategoryAdmin(admin.ModelAdmin):
         if obj:
             return [VideosCategoryInline]
         return []
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
