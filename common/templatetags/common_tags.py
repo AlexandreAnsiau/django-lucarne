@@ -1,6 +1,7 @@
 from itertools import zip_longest
 
 from django import template
+from django.conf import settings
 from django.utils.translation import activate, get_language
 from django.urls import resolve, reverse
 
@@ -31,3 +32,8 @@ def zip_longest_iterable(iterable_1, iterable_2):
         for iterable in [iterable_1, iterable_2]
     ]
     return zip_longest(*iterables)
+
+
+@register.simple_tag(name="setting")
+def get_setting(setting):
+    return getattr(settings, setting)
