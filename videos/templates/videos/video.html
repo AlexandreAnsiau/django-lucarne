@@ -27,8 +27,6 @@
                 <div class="grid-screenshot" oncontextmenu="return false;">
                     {% for screenshot in video.screenshots.all %}
                         <img class="screenshot" src="{{ screenshot.screenshot.url }}">
-                    {% empty %}
-                        {% trans "Aucun screenshot n'est disponible pour cette video." %}
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -38,7 +36,7 @@
 </div>
 {% endblock %}
 
-{% block script %}
+{% block scripts %}
     <script type="text/javascript" src="{% static 'js/previouspage.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/gridhandle.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/icondisplayfix.js' %}"></script>
