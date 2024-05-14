@@ -167,6 +167,8 @@ STATIC_ROOT = Path(BASE_DIR).joinpath("collectstatic")
 # Media files for production
 MEDIA_ROOT = Path(BASE_DIR).joinpath("media")
 
+MEDIA_DEFAULT = MEDIA_ROOT.joinpath("default")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

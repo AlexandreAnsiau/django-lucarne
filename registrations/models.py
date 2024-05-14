@@ -18,14 +18,15 @@ class CustomUser(OrderableModel, FileModel, AbstractUser):
     last_name = models.CharField(max_length=100, verbose_name=_("nom de famille"))
     slug = models.SlugField()
     description = models.TextField(max_length=1000, verbose_name=_("description"), blank=True)
-    profile_image = models.ImageField(upload_to="profile_images/", null=True, blank=True, verbose_name=_("photo de profil"))
+    profile_image = models.ImageField(upload_to="profile_images/", null=True, blank=True,
+                                      default="default/profile_images/user.png", verbose_name=_("photo de profil"))
     phone_number = models.CharField(max_length=30, blank=True, verbose_name=_("num de tel"))
     job = models.CharField(max_length=100, verbose_name=_("métier"), blank=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
-    objects = CustomUserManager()  # Default manager is always the first one to be declared.
+    objects = CustomUserManager()
 
     class Meta(OrderableModel.Meta):
         verbose_name = _("utilisateur")
