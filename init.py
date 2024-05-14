@@ -2,12 +2,10 @@ import os
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent
-FRONTEND_DIR = PROJECT_DIR.joinpath("frontend")
 
 
 def init_project():
     os.system("pip install -r requirements.txt")
-    os.system(f"cd {FRONTEND_DIR.absolute()} && npm ci && npm run build")
     os.system("python manage.py migrate")
     os.system("python manage.py runserver")
 
