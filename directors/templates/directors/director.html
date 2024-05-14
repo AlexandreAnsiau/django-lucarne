@@ -40,7 +40,7 @@
         </div>
         <div class="grid-container" oncontextmenu="return false;">
             {% for video in director.videos.all %}
-            <a href="{% url 'video' pk=video.id %}" onclick="delayTransition(this)">
+            <a href="{% url 'video' pk=video.id %}?from_director={{ director.pk }}" onclick="delayTransition(this)">
                 <div class="mini-video">
                     <video muted loop preload onmouseover="startLoop(this)" onmouseout="pauseLoop(this)">
                         <source src="{{ video.video.url }}" type="video/mp4">
