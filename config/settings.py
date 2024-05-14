@@ -132,9 +132,14 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'fr'
 
 LANGUAGES = (
-    ("fr", _("Français")),
-    ("en", _("English"))
+    ("fr", "Français"),
+    ("en", "English")
 )
+
+LOCALE_PATHS = [
+    BASE_DIR.joinpath("config", "locale"),
+    BASE_DIR.joinpath("templates", "locale")
+]
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'fr'
 
