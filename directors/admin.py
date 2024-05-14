@@ -13,9 +13,10 @@ from videos.admin import VideosDirectorInline
 class DirectorAdmin(OrderableAdmin, BaseUserAdmin):
     add_form = DirectorCreationForm
     exclude = ("last_login",)
-    ordering = ("email",)
+    ordering = ("ordering",)
+    search_fields = ["email"]
+    search_help_text = _("Chercher un réalisateur à partir de son email.")
     list_filter = []
-    search_fields = []
     list_editable = ("ordering",)
     list_display = ("email", "representation", "ordering")
     ordering_field_hide_input = True

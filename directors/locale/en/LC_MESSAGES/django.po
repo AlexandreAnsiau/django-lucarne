@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-13 12:04+0000\n"
+"POT-Creation-Date: 2024-05-14 19:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:23
+#: admin.py:18
+msgid "Chercher un réalisateur à partir de son email."
+msgstr "Search for a user from his email."
+
+#: admin.py:24
 msgid "realisateur"
 msgstr "director"
 
-#: admin.py:54
+#: admin.py:55
 msgid "photo de profil"
 msgstr "profile picture"
 
