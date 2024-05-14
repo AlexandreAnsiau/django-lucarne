@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-13 12:00+0000\n"
+"POT-Creation-Date: 2024-05-14 15:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,19 +30,19 @@ msgstr "Videos"
 msgid "Nom de la video"
 msgstr "Name of the video"
 
-#: admin.py:46 admin.py:50
+#: admin.py:43 admin.py:47
 msgid "screenshot"
 msgstr "screenshot"
 
-#: admin.py:47
+#: admin.py:44
 msgid "screenshots"
 msgstr "screenshots"
 
-#: admin.py:80
+#: admin.py:73
 msgid "video"
 msgstr "video"
 
-#: admin.py:88 admin.py:112 models.py:11 models.py:28
+#: admin.py:81 admin.py:105 models.py:11 models.py:28
 msgid "video de présentation"
 msgstr "video presentation"
 
@@ -77,10 +77,6 @@ msgstr "Home"
 #: templates/videos/category.html:28
 msgid "Aucune video n'est disponible pour cette catégorie."
 msgstr "No videos are available for this category."
-
-#: templates/videos/video.html:31
-msgid "Aucun screenshot n'est disponible pour cette video."
-msgstr "No screenshots are available for this video."
 
 #: urls.py:7
 msgid "categories/<int:pk>/"
