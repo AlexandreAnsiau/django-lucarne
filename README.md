@@ -68,7 +68,7 @@ The tables of the django framework must be generated.
 > cd ../ \
 python manage.py migrate
 
-### 5. Verification if the project display pages. 
+### 5. Verification if the project displays pages. 
 
 First at all, the django server must be turned on.
 
