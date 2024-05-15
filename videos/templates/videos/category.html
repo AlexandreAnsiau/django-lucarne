@@ -13,7 +13,7 @@
 <div id="autoscroll" class="autoscroll">
     <div class="grid-container" oncontextmenu="return false;">
         {% for video in category.videos.all %}
-        <a href="{% url 'video' pk=video.id %}" onclick="delayTransition(this)">
+        <a href="{% url 'video' pk=video.id %}?from_category={{ category.pk }}" onclick="delayTransition(this)">
             <div class="mini-video">
                     <video muted loop preload onmouseover="startLoop(this)" onmouseout="pauseLoop(this)">
                             <source src="{% if video.presentation_video %}{{ video.presentation_video.url }}{% else %}{{ video.video.url }}{% endif %}" type="video/mp4">

@@ -12,7 +12,16 @@
 <div class="darkBkg">
     <div id="autoscroll" class="contentScroll">
         <img class="close" src="{% static 'img/logo/close/close.svg' %}" onclick="document.getElementById('redirection').click()">
-        <a style="display: none;" id="redirection" href="{% if request.GET.from_director %}{% url 'director' pk=request.GET.from_director %}{% else %}{% url 'index' %}{% endif %}">
+        <a style="display: none;" id="redirection"
+           href="
+           {% if request.GET.from_director %}
+           {% url 'director' pk=request.GET.from_director %}
+           {% elif request.GET.from_category %}
+           {% url 'category' pk=request.GET.from_category %}
+           {% else %}
+           {% url 'index' %}
+           {% endif %}"
+        >
         </a>
         <div class="contentFrame" oncontextmenu="return false;">
             <div class="grid-fullvideo">
