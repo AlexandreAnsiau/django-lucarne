@@ -43,7 +43,7 @@
             <a href="{% url 'video' pk=video.id %}?from_director={{ director.pk }}" onclick="delayTransition(this)">
                 <div class="mini-video">
                     <video muted loop preload onmouseover="startLoop(this)" onmouseout="pauseLoop(this)">
-                        <source src="{{ video.video.url }}" type="video/mp4">
+                        <source src="{% if video.presentation_video %}{{ video.presentation_video.url }}{% else %}{{ video.video.url }}{% endif %}" type="video/mp4">
                         Ce format de video n'est pas pris en charge par votre browser...
                     </video>
                     <h3>{{ video.name }}</h3>

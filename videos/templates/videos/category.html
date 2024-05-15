@@ -15,12 +15,10 @@
         {% for video in category.videos.all %}
         <a href="{% url 'video' pk=video.id %}" onclick="delayTransition(this)">
             <div class="mini-video">
-                {% if video.presentation_video %}
-                    <video muted loop preload onmouseover="startLoop(this)" onmouseout="pauseLoop(this)">                  
-                            <source src="{{ video.presentation_video.url }}" type="video/mp4">
+                    <video muted loop preload onmouseover="startLoop(this)" onmouseout="pauseLoop(this)">
+                            <source src="{% if video.presentation_video %}{{ video.presentation_video.url }}{% else %}{{ video.video.url }}{% endif %}" type="video/mp4">
                             Ce format de video n'est pas pris en charge par votre browser...                
                     </video>
-                {% endif %}
                 <h3>{{ video.name|title }}</h3>
             </div>
         </a>
